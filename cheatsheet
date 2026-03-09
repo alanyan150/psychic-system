@@ -1,0 +1,10 @@
+ids:			integer
+status:			varchar(3)
+username:		varchar(30)
+name:			varchar(200)
+email:			varchar(256)
+pwdhash:		varchar(256)
+content/description:	varchar(2000)
+tags:			varchar(500)
+location:		varchar(200)
+

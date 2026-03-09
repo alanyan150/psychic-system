@@ -9,4 +9,50 @@ CONNECT TO COMP421;
 
 -- This is only an example of how you add drop table ddls to this file.
 --   You may remove it.
-DROP TABLE MYTEST01;
+--DROP TABLE MYTEST01;
+
+DROP TABLE Users;
+
+DROP TABLE Staffs;
+
+DROP TABLE Businesses;
+
+DROP TABLE Verifieds;
+
+DROP TABLE Posts;
+
+DROP TABLE Groups;
+
+DROP TABLE Events;
+
+DROP TABLE Comments;
+
+DROP TABLE PrivateMessages;
+
+DROP TABLE Follows;
+
+DROP TABLE Saves;
+
+DROP TABLE Likes;
+
+DROP TABLE Dislikes;
+
+DROP TABLE Shares;
+
+DROP TABLE IsMember;
+
+DROP TABLE IsAdmin;
+
+DROP TABLE Announces;
+
+DROP TABLE Advertises;
+
+DROP TABLE Organizes;
+
+
+
+
+
+
+
+
