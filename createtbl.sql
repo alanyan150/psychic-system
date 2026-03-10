@@ -16,19 +16,20 @@ CREATE TABLE Users
 	name VARCHAR(200),
 	email VARCHAR(256) UNIQUE NOT NULL,
 	pwdhash VARCHAR(256) UNIQUE NOT NULL,
-	status VARCHAR(3),
+	status VARCHAR(3) DEFAULT 'INA',		--INA: inactive, ACT: active
 	location VARCHAR(30),
 	joindate DATE NOT NULL,
 	birthday DATE,
 	bio VARCHAR(200),
-	pfp VARCHAR(200),
+	--pfp VARCHAR(200) DEFAULT 'Picture',
+	pfp BLOB(10M),
 	PRIMARY KEY(userid)
 );
 
 CREATE TABLE Staffs
 (
 	userid INTEGER NOT NULL,
-	eid INTEGER,
+	eid INTEGER NOT NULL,
 	role VARCHAR(30),
 	--CONSTRAINT conspsname PRIMARY KEY(username),
 	--CONSTRAINT consfsname FOREIGN KEY(username) REFERENCES Users(username)
@@ -59,19 +60,19 @@ CREATE TABLE Verifieds
 CREATE TABLE Posts
 (
 	postid INTEGER NOT NULL,
-	caption varchar(2000),
-	privacy varchar(3) NOT NULL,
+	caption VARCHAR(2000),
+	privacy VARCHAR(3) NOT NULL,
 	time TIMESTAMP NOT NULL,
-	fname varchar(2000) NOT NULL,
-	location varchar(200),
-	tags varchar(500),
+	fname VARCHAR(2000) NOT NULL,
+	location VARCHAR(200),
+	tags VARCHAR(500),
 	PRIMARY KEY(postid)
 );
 
 CREATE TABLE Groups
 (
-	gname varchar(200) NOT NULL,
-	description varchar(2000),
+	gname VARCHAR(200) NOT NULL,
+	description VARCHAR(2000) DEFAULT 'Description',
 	creationdate TIMESTAMP NOT NULL,
 	PRIMARY KEY(gname)
 );
@@ -79,10 +80,10 @@ CREATE TABLE Groups
 CREATE TABLE Events
 (
 	eventid INTEGER NOT NULL,
-	name varchar(200),
+	name VARCHAR(200) DEFAULT 'Name',
 	edate TIMESTAMP,
-	description varchar(2000),
-	location varchar(200),
+	description VARCHAR(2000) DEFAULT 'Description',
+	location VARCHAR(200) DEFAULT 'Location',
 	PRIMARY KEY(eventid)
 );
 
@@ -92,7 +93,7 @@ CREATE TABLE Comments
 	userid INTEGER NOT NULL,
 	postid INTEGER NOT NULL,
 	time TIMESTAMP NOT NULL,
-	contents varchar(2000) NOT NULL,
+	contents VARCHAR(2000) NOT NULL,
 	PRIMARY KEY(commentid, userid, postid),
 	--CONSTRAINT consfuid FOREIGN KEY(userid) REFERENCES Users(userid),
 	--CONSTRAINT consfpid FOREIGN KEY(postid) REFERENCES Posts(postid)
@@ -105,9 +106,9 @@ CREATE TABLE PrivateMessages
 	messageid INTEGER NOT NULL,
 	sender INTEGER NOT NULL,
 	receiver INTEGER NOT NULL,
-	content varchar(2000) NOT NULL,
+	content VARCHAR(2000) NOT NULL,
 	time TIMESTAMP NOT NULL,
-	status varchar(3),
+	status VARCHAR(3) DEFAULT 'SND',		--SND for sending, SNT for sent, NS for not sent
 	PRIMARY KEY(messageid, sender, receiver),
 	FOREIGN KEY(sender) REFERENCES Users(userid),
 	FOREIGN KEY(receiver) REFERENCES Users(userid)
@@ -161,7 +162,7 @@ CREATE TABLE Shares
 CREATE TABLE IsMember
 (
 	userid INTEGER NOT NULL,
-	gname varchar(200) NOT NULL,
+	gname VARCHAR(200) NOT NULL,
 	PRIMARY KEY(userid, gname),
 	FOREIGN KEY(userid) REFERENCES Users(userid),
 	FOREIGN KEY(gname) REFERENCES Groups(gname)
@@ -170,7 +171,7 @@ CREATE TABLE IsMember
 CREATE TABLE IsAdmin
 (
 	userid INTEGER NOT NULL,
-	gname varchar(200) NOT NULL,
+	gname VARCHAR(200) NOT NULL,
 	PRIMARY KEY(userid, gname),
 	FOREIGN KEY(userid) REFERENCES Users(userid),
 	FOREIGN KEY(gname) REFERENCES Groups(gname)
@@ -178,7 +179,7 @@ CREATE TABLE IsAdmin
 
 CREATE TABLE Announces
 (
-	gname varchar(200) NOT NULL,
+	gname VARCHAR(200) NOT NULL,
 	eventid INTEGER NOT NULL,
 	PRIMARY KEY(gname, eventid),
 	FOREIGN KEY(gname) REFERENCES Groups(gname),
@@ -202,7 +203,7 @@ CREATE TABLE Organizes
 	FOREIGN KEY(userid) REFERENCES Verifieds(userid),
 	FOREIGN KEY(eventid) REFERENCES Events(eventid)
 );
-	
+
 
 
 
