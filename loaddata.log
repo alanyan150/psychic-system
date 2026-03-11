@@ -351,7 +351,7 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO PrivateMessages VALUES (0,0,1,'Hello','2024-02-15 10:00:00','SNT'), (1,1,0,'Hi','2024-02-15 10:05:00','SND'), (2,5,1,'Hey','2024-02-15 10:10:00','DEL'), (3,19,1,'Yo','2024-02-15 10:15:00','SNT'), (4,3,8,'Reply','2024-02-15 10:20:00','SND')
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Follows VALUES (0,1), (1,0), (5,10), (10,1), (15,10)
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Follows VALUES (0,1), (1,0), (5,10), (10,1), (10,11), (11,10), (40,10), (10,40), (11,40), (15,10)
 DB20000I  The SQL command completed successfully.
 
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Saves VALUES (0,0), (5,0), (10,1), (15,2), (0,3)

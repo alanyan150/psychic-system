@@ -110,7 +110,7 @@ CREATE TABLE Follows
 (
 	follower INTEGER NOT NULL,
 	following INTEGER NOT NULL,
-	PRIMARY KEY(follower),
+	PRIMARY KEY(follower, following),
 	FOREIGN KEY(follower) REFERENCES Users(userid),
 	FOREIGN KEY(following) REFERENCES Users(userid)
 );
