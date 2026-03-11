@@ -227,6 +227,7 @@ INSERT INTO IsMember VALUES
    (0,'Group1'),
    (5,'Group2'),
    (10,'Group3'),
+   (11,'Group3'),
    (15,'Group4'),
    (0,'Group5')
 ;

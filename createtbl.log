@@ -31,13 +31,13 @@ db2 => db2 => db2 => db2 => db2 => db2 => db2 => db2 (cont.) => db2 (cont.) => d
  location VARCHAR(30), joindate DATE NOT NULL, birthday DATE, bio VARCHAR(200), pfp BLOB(10M), PRIMARY KEY(userid) )
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Staffs ( userid INTEGER NOT NULL, eid INTEGER NOT NULL, role VARCHAR(30), PRIMARY KEY(userid), FOREIGN KEY(userid) REFERENCES Users(userid) )
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Staffs ( userid INTEGER NOT NULL, eid INTEGER NOT NULL, role VARCHAR(30), PRIMARY KEY(userid), FOREIGN KEY(userid) REFERENCES Users(userid) )
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Businesses ( userid INTEGER NOT NULL, btype VARCHAR(30), PRIMARY KEY(userid), FOREIGN KEY(userid) REFERENCES Users(userid) )
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Businesses ( userid INTEGER NOT NULL, btype VARCHAR(30), PRIMARY KEY(userid), FOREIGN KEY(userid) REFERENCES Users(userid) )
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Verifieds ( userid INTEGER NOT NULL, docnum VARCHAR(256) UNIQUE NOT NULL, PRIMARY KEY(userid), FOREIGN KEY(userid) REFERENCES Users(userid) )
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Verifieds ( userid INTEGER NOT NULL, docnum VARCHAR(256) UNIQUE NOT NULL, PRIMARY KEY(userid), FOREIGN KEY(userid) REFERENCES Users(userid) )
 DB20000I  The SQL command completed successfully.
 
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Posts ( postid INTEGER NOT NULL, caption VARCHAR(2000), privacy VARCHAR(3) NOT NULL, time TIMESTAMP NOT NULL, fname VARCHAR(2000) NOT NULL, location VARCHAR(200), tags VARCHAR(500), PRIMARY KEY(postid) )
@@ -49,7 +49,7 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Events ( eventid INTEGER NOT NULL, name VARCHAR(200) DEFAULT 'Name', edate TIMESTAMP, description VARCHAR(2000) DEFAULT 'Description', location VARCHAR(200) DEFAULT 'Location', PRIMARY KEY(eventid) )
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Comments ( commentid INTEGER NOT NULL, userid INTEGER NOT NULL, postid INTEGER NOT NULL, time TIMESTAMP NOT NULL, contents VARCHAR(2000) NOT NULL, PRIMARY KEY(commentid, userid, postid), FOREIGN KEY(userid) REFERENCES Users(userid), FOREIGN KEY(postid) REFERENCES Posts(postid) )
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Comments ( commentid INTEGER NOT NULL, userid INTEGER NOT NULL, postid INTEGER NOT NULL, time TIMESTAMP NOT NULL, contents VARCHAR(2000) NOT NULL, PRIMARY KEY(commentid, userid, postid), FOREIGN KEY(userid) REFERENCES Users(userid), FOREIGN KEY(postid) REFERENCES Posts(postid) )
 DB20000I  The SQL command completed successfully.
 
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE PrivateMessages ( messageid INTEGER NOT NULL, sender INTEGER NOT NULL, receiver INTEGER NOT NULL, content VARCHAR(2000) NOT NULL, time TIMESTAMP NOT NULL, status VARCHAR(3) DEFAULT 'SNT',		--SNT for sent, RD for read, DEL for deleted
@@ -86,4 +86,4 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => CREATE TABLE Organizes ( userid INTEGER NOT NULL, eventid INTEGER NOT NULL, PRIMARY KEY(userid, eventid), FOREIGN KEY(userid) REFERENCES Verifieds(userid), FOREIGN KEY(eventid) REFERENCES Events(eventid) )
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 => db2 => db2 => db2 => db2 => db2 => db2 => db2 => 
+db2 => db2 => db2 => db2 => db2 => db2 => db2 => 

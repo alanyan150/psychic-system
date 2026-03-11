@@ -348,7 +348,7 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Comments VALUES (0,0,0,'2024-02-10 10:00:00','Nice post'), (1,5,1,'2024-02-10 11:00:00','Cool'), (2,10,4,'2024-02-10 12:00:00','Great'), (3,19,3,'2024-02-10 13:00:00','Awesome'), (4,4,4,'2024-02-10 14:00:00','Love it')
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO PrivateMessages VALUES (0,0,1,'Hello','2024-02-15 10:00:00','SNT'), (1,1,0,'Hi','2024-02-15 10:05:00','RD'), (2,5,1,'Hey','2024-02-15 10:10:00','DEL'), (3,19,1,'Yo','2024-02-15 10:15:00','SNT'), (4,3,8,'Reply','2024-02-15 10:20:00','RD')
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO PrivateMessages VALUES (0,0,1,'Hello','2024-02-15 10:00:00','SNT'), (1,1,0,'Hi','2024-02-15 10:05:00','SND'), (2,5,1,'Hey','2024-02-15 10:10:00','DEL'), (3,19,1,'Yo','2024-02-15 10:15:00','SNT'), (4,3,8,'Reply','2024-02-15 10:20:00','SND')
 DB20000I  The SQL command completed successfully.
 
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Follows VALUES (0,1), (1,0), (5,10), (10,1), (15,10)
@@ -366,7 +366,7 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Shares VALUES (0,0), (5,0), (10,1), (15,2), (0,3)
 DB20000I  The SQL command completed successfully.
 
-db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO IsMember VALUES (0,'Group1'), (5,'Group2'), (10,'Group3'), (15,'Group4'), (0,'Group5')
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO IsMember VALUES (0,'Group1'), (5,'Group2'), (10,'Group3'), (11,'Group3'), (15,'Group4'), (0,'Group5')
 DB20000I  The SQL command completed successfully.
 
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO IsAdmin VALUES (0,'Group1'), (5,'Group2'), (10,'Group3'), (15,'Group4'), (0,'Group5')
