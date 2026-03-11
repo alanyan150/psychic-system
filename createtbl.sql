@@ -31,8 +31,6 @@ CREATE TABLE Staffs
 	userid INTEGER NOT NULL,
 	eid INTEGER NOT NULL,
 	role VARCHAR(30),
-	--CONSTRAINT conspsname PRIMARY KEY(username),
-	--CONSTRAINT consfsname FOREIGN KEY(username) REFERENCES Users(username)
 	PRIMARY KEY(userid),
 	FOREIGN KEY(userid) REFERENCES Users(userid)
 );
@@ -41,8 +39,6 @@ CREATE TABLE Businesses
 (
 	userid INTEGER NOT NULL,
 	btype VARCHAR(30),
-	--CONSTRAINT conspbname PRIMARY KEY(username),
-	--CONSTRAINT consfbname FOREIGN KEY(username) REFERENCES Users(username)
 	PRIMARY KEY(userid),
 	FOREIGN KEY(userid) REFERENCES Users(userid)
 );
@@ -51,8 +47,6 @@ CREATE TABLE Verifieds
 (
 	userid INTEGER NOT NULL,
 	docnum VARCHAR(256) UNIQUE NOT NULL,
-	--CONSTRAINT conspvname PRIMARY KEY(username),
-	--CONSTRAINT consfvname FOREIGN KEY(username) REFERENCES Users(username)
 	PRIMARY KEY(userid),
 	FOREIGN KEY(userid) REFERENCES Users(userid)
 );
@@ -95,8 +89,6 @@ CREATE TABLE Comments
 	time TIMESTAMP NOT NULL,
 	contents VARCHAR(2000) NOT NULL,
 	PRIMARY KEY(commentid, userid, postid),
-	--CONSTRAINT consfuid FOREIGN KEY(userid) REFERENCES Users(userid),
-	--CONSTRAINT consfpid FOREIGN KEY(postid) REFERENCES Posts(postid)
 	FOREIGN KEY(userid) REFERENCES Users(userid),
 	FOREIGN KEY(postid) REFERENCES Posts(postid)
 );
@@ -108,7 +100,7 @@ CREATE TABLE PrivateMessages
 	receiver INTEGER NOT NULL,
 	content VARCHAR(2000) NOT NULL,
 	time TIMESTAMP NOT NULL,
-	status VARCHAR(3) DEFAULT 'SND',		--SND for sending, SNT for sent, NS for not sent
+	status VARCHAR(3) DEFAULT 'SNT',		--SNT for sent, RD for read, DEL for deleted
 	PRIMARY KEY(messageid, sender, receiver),
 	FOREIGN KEY(sender) REFERENCES Users(userid),
 	FOREIGN KEY(receiver) REFERENCES Users(userid)
@@ -203,9 +195,6 @@ CREATE TABLE Organizes
 	FOREIGN KEY(userid) REFERENCES Verifieds(userid),
 	FOREIGN KEY(eventid) REFERENCES Events(eventid)
 );
-
-
-
 
 
 
