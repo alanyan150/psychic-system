@@ -177,10 +177,10 @@ INSERT INTO Comments VALUES
 
 INSERT INTO PrivateMessages VALUES
    (0,0,1,'Hello','2024-02-15 10:00:00','SNT'),
-   (1,1,0,'Hi','2024-02-15 10:05:00','SND'),
+   (1,1,0,'Hi','2024-02-15 10:05:00','RD'),
    (2,5,1,'Hey','2024-02-15 10:10:00','DEL'),
    (3,19,1,'Yo','2024-02-15 10:15:00','SNT'),
-   (4,3,8,'Reply','2024-02-15 10:20:00','SND')
+   (4,3,8,'Reply','2024-02-15 10:20:00','RD')
 ;
 
 INSERT INTO Follows VALUES
