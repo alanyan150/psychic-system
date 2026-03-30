@@ -196,6 +196,14 @@ INSERT INTO Follows VALUES
    (15,10)
 ;
 
+INSERT INTO Posted VALUES
+   (3, 0),
+   (3, 3),
+   (10, 2),
+   (0, 1),
+   (0, 4)
+;
+
 INSERT INTO Saves VALUES
    (0,0),
    (5,0),

@@ -354,6 +354,9 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Follows VALUES (0,1), (1,0), (5,10), (10,1), (10,11), (11,10), (40,10), (10,40), (11,40), (15,10)
 DB20000I  The SQL command completed successfully.
 
+db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Posted VALUES (3, 0), (3, 3), (10, 2), (0, 1), (0, 4)
+DB20000I  The SQL command completed successfully.
+
 db2 => db2 => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => db2 (cont.) => INSERT INTO Saves VALUES (0,0), (5,0), (10,1), (15,2), (0,3)
 DB20000I  The SQL command completed successfully.
 

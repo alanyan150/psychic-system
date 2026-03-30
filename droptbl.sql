@@ -31,6 +31,8 @@ DROP TABLE PrivateMessages;
 
 DROP TABLE Follows;
 
+DROP TABLE Posted;
+
 DROP TABLE Saves;
 
 DROP TABLE Likes;

@@ -115,6 +115,15 @@ CREATE TABLE Follows
 	FOREIGN KEY(following) REFERENCES Users(userid)
 );
 
+CREATE TABLE Posted
+(
+	posterid INTEGER NOT NULL,
+	postid INTEGER NOT NULL,
+	PRIMARY KEY(posterid, postid),
+	FOREIGN KEY(posterid) REFERENCES Users(userid),
+	FOREIGN KEY(postid) REFERENCES Users(userid)
+);
+
 CREATE TABLE Saves
 (
 	userid INTEGER NOT NULL,

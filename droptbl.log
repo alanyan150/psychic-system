@@ -57,6 +57,9 @@ DB20000I  The SQL command completed successfully.
 db2 => db2 => DROP TABLE Follows
 DB20000I  The SQL command completed successfully.
 
+db2 => db2 => DROP TABLE Posted
+DB20000I  The SQL command completed successfully.
+
 db2 => db2 => DROP TABLE Saves
 DB20000I  The SQL command completed successfully.
 
