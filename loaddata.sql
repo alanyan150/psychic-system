@@ -118,6 +118,7 @@ INSERT INTO Users VALUES (97,'uroaf2o','Uta Roaf','uroaf2o@tuttocitta.it','$2a$0
 INSERT INTO Users VALUES (98,'btrinkwon2p','Bertrand Trinkwon','btrinkwon2p@newyorker.com','$2a$04$nNmHcmV6FXR.lDJgvr90F.VF.s1OdqEjgKNqpYQAfjhEySKf1v3pu','ACT','Daoqiao','2024-04-26','1995-09-16','Integer ac neque. Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus. In sagittis dui vel nisl.',NULL);
 INSERT INTO Users VALUES (99,'stottem2q','Shel Tottem','stottem2q@mediafire.com','$2a$04$jM6nag/XNZYitKMDfXOY9uMFQfkB8JUhhWrhBOtT7Mgzc15owFIau','INA','Shensuo','2021-07-25','1972-05-18','"Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero',NULL);
 INSERT INTO Users VALUES (0,'vcostan2r','Vasily Costan','vcostan2r@surveymonkey.com','$2a$04$utaLK7c8q/r8vQ6arzBMJuYOavM4S.qvnE6KoEPJ5WAuIAd7S2aSe','INA','Johanneshov','2026-03-10','2003-10-16','Aliquam quis turpis eget elit sodales scelerisque.',NULL);
+INSERT INTO Users VALUES (999999, 'test', 'Test testing', 'test@example.com', 'testhash$123', 'ACT', 'Montreal', '2026-03-31', '2000-01-01', 'allo', NULL);
 
 INSERT INTO Staffs VALUES
    (5,101,'Moderator'),
@@ -143,12 +144,12 @@ INSERT INTO Verifieds VALUES
    (19,'DOC005')
 ;
 
-INSERT INTO Posts VALUES
-   (0,'Caption1','PUB','2024-02-01 10:00:00','img1.jpg','Montreal','#fun'),
-   (1,'Caption2','PUB','2024-02-02 11:00:00','img2.jpg','Toronto','#food'),
-   (2,'Caption3','PRI','2024-02-03 12:00:00','img3.jpg','Vancouver','#travel'),
-   (3,'Caption4','PUB','2024-02-04 13:00:00','img4.jpg','Calgary','#music'),
-   (4,'Caption5','PUB','2024-02-05 14:00:00','img5.jpg','Ottawa','#sports')
+INSERT INTO Posts (caption, privacy, time, fname, location, tags) VALUES
+   ('Caption1','PUB','2024-02-01 10:00:00','img1.jpg','Montreal','#fun'),
+   ('Caption2','PUB','2024-02-02 11:00:00','img2.jpg','Toronto','#food'),
+   ('Caption3','PRI','2024-02-03 12:00:00','img3.jpg','Vancouver','#travel'),
+   ('Caption4','PUB','2024-02-04 13:00:00','img4.jpg','Calgary','#music'),
+   ('Caption5','PUB','2024-02-05 14:00:00','img5.jpg','Ottawa','#sports')
 ;
 
 INSERT INTO Groups VALUES
